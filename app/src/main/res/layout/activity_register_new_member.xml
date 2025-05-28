@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackground"
+    tools:context=".presentation.register.RegisterNewMemberActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/view_toolbar"
+            layout="@layout/common_toolbar" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/toolbarViewLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_container" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="@+id/main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider_line">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ctn_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_15sdp">
+
+            <FrameLayout
+                android:id="@+id/ctn_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_circle_border"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_profile_image"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_user" />
+
+                <ImageView
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_22sdp"
+                    android:background="@drawable/button_primary_bg"
+                    android:padding="@dimen/_5sdp"
+                    app:tint="@color/white"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:src="@drawable/ic_plus"
+                    android:layout_gravity="bottom|end"/>
+
+            </FrameLayout>
+
+            <com.rabadiya.base.customviews.customtextview.CommonTextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:includeFontPadding="false"
+                android:text="@string/res_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ctn_profile"
+                app:textColor="secondaryOnTheme"
+                app:textSize="dialog"
+                app:textStyle="semiBold" />
+
+            <com.rabadiya.base.customviews.customtextview.CommonEditText
+                android:id="@+id/et_name"
+                style="@style/EdittextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:hint="@string/res_only_your_name"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+            <com.rabadiya.base.customviews.customtextview.CommonTextView
+                android:id="@+id/tv_father_husband_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:includeFontPadding="false"
+                android:text="@string/res_father_or_husband_name"
+                app:layout_constraintBottom_toTopOf="@id/et_father_husband_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_name"
+                app:textColor="secondaryOnTheme"
+                app:textSize="dialog"
+                app:textStyle="semiBold" />
+
+            <com.rabadiya.base.customviews.customtextview.CommonEditText
+                android:id="@+id/et_father_husband_name"
+                style="@style/EdittextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:hint="@string/res_write_only_your_father_or_husband_name"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_father_husband_name" />
+
+            <com.rabadiya.base.customviews.customtextview.CommonTextView
+                android:id="@+id/tv_birth_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:includeFontPadding="false"
+                android:text="@string/res_birthday_date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_father_husband_name"
+                app:textColor="secondaryOnTheme"
+                app:textSize="dialog"
+                app:textStyle="semiBold" />
+
+            <com.rabadiya.base.customviews.customtextview.CommonEditText
+                android:id="@+id/et_birth_date"
+                style="@style/EdittextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:drawableEnd="@drawable/ic_calendar"
+                android:enabled="true"
+                android:focusable="false"
+                android:hint="@string/res_birthday_date_1"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_birth_date" />
+
+            <com.rabadiya.base.customviews.customtextview.CommonTextView
+                android:id="@+id/tv_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:includeFontPadding="false"
+                android:text="@string/res_address"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_birth_date"
+                app:textColor="secondaryOnTheme"
+                app:textSize="dialog"
+                app:textStyle="semiBold" />
+
+            <com.rabadiya.base.customviews.customtextview.CommonEditText
+                android:id="@+id/et_address"
+                style="@style/EdittextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:hint="@string/res_write_address"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_address" />
+
+            <com.rabadiya.base.customviews.customtextview.CommonTextView
+                android:id="@+id/tv_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:includeFontPadding="false"
+                android:text="@string/res_gender"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_address"
+                app:textColor="secondaryOnTheme"
+                app:textSize="dialog"
+                app:textStyle="semiBold" />
+
+            <RadioGroup
+                android:id="@+id/rg_gender"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:background="@drawable/shape_common_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_gender">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:fontFamily="@font/font_medium"
+                    android:includeFontPadding="false"
+                    android:text="@string/res_gender_male"
+                    android:textColor="@color/textSecondaryDark"
+                    android:textSize="16sp"
+                    app:buttonTint="@color/textSecondaryDark" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:fontFamily="@font/font_medium"
+                    android:includeFontPadding="false"
+                    android:text="@string/res_gender_female"
+                    android:textColor="@color/textSecondaryDark"
+                    android:textSize="16sp"
+                    app:buttonTint="@color/textSecondaryDark" />
+
+            </RadioGroup>
+
+            <com.rabadiya.base.customviews.customtextview.CommonTextView
+                android:id="@+id/tv_mobile_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:includeFontPadding="false"
+                android:text="@string/res_mobile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rg_gender"
+                app:textColor="secondaryOnTheme"
+                app:textSize="dialog"
+                app:textStyle="semiBold" />
+
+            <com.rabadiya.base.customviews.customtextview.CommonEditText
+                android:id="@+id/et_mobile"
+                style="@style/EdittextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:hint="@string/res_write_mobile"
+                android:inputType="number"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.275"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_mobile_no" />
+
+            <com.rabadiya.base.customviews.customtextview.CommonTextView
+                android:id="@+id/tv_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:includeFontPadding="false"
+                android:text="@string/res_email_id"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_mobile"
+                app:textColor="secondaryOnTheme"
+                app:textSize="dialog"
+                app:textStyle="semiBold" />
+
+            <com.rabadiya.base.customviews.customtextview.CommonEditText
+                android:id="@+id/et_email"
+                style="@style/EdittextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:hint="@string/res_write_email_id"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_email" />
+
+            <com.rabadiya.base.customviews.customtextview.CommonTextView
+                android:id="@+id/tv_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:includeFontPadding="false"
+                android:text="@string/res_password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_email"
+                app:textColor="secondaryOnTheme"
+                app:textSize="dialog"
+                app:textStyle="semiBold" />
+
+            <com.rabadiya.base.customviews.customtextview.PasswordEditText
+                android:id="@+id/et_password"
+                style="@style/EdittextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:maxLines="1"
+                android:paddingVertical="@dimen/_1sdp"
+                android:paddingStart="@dimen/_6sdp"
+                app:hint="@string/res_write_password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_password"
+                tools:ignore="RtlSymmetry" />
+
+            <com.rabadiya.base.customviews.customtextview.CommonTextView
+                android:id="@+id/tv_business"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:includeFontPadding="false"
+                android:text="@string/res_business"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_password"
+                app:textColor="secondaryOnTheme"
+                app:textSize="dialog"
+                app:textStyle="semiBold" />
+
+            <RadioGroup
+                android:id="@+id/rg_business"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:background="@drawable/shape_common_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_business">
+
+                <RadioButton
+                    android:id="@+id/rb_business"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:fontFamily="@font/font_medium"
+                    android:includeFontPadding="false"
+                    android:text="@string/res_type_business"
+                    android:textColor="@color/textSecondaryDark"
+                    android:textSize="16sp"
+                    app:buttonTint="@color/textSecondaryDark" />
+
+                <RadioButton
+                    android:id="@+id/rb_job"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:fontFamily="@font/font_medium"
+                    android:includeFontPadding="false"
+                    android:text="@string/res_type_job"
+                    android:textColor="@color/textSecondaryDark"
+                    android:textSize="16sp"
+                    app:buttonTint="@color/textSecondaryDark" />
+
+                <RadioButton
+                    android:id="@+id/rb_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:fontFamily="@font/font_medium"
+                    android:includeFontPadding="false"
+                    android:text="@string/res_type_other"
+                    android:textColor="@color/textSecondaryDark"
+                    android:textSize="16sp"
+                    app:buttonTint="@color/textSecondaryDark" />
+
+            </RadioGroup>
+
+            <com.rabadiya.base.customviews.customtextview.CommonTextView
+                android:id="@+id/tv_business_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:includeFontPadding="false"
+                android:text="@string/res_business_type"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rg_business"
+                app:textColor="secondaryOnTheme"
+                app:textSize="dialog"
+                app:textStyle="semiBold" />
+
+            <!--<com.rabadiya.base.customviews.customtextview.SelectionEditText
+                android:id="@+id/et_business_type"
+                style="@style/EdittextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:paddingVertical="@dimen/_1sdp"
+                android:paddingStart="@dimen/_6sdp"
+                app:hint="@string/res_business_default"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:enabled="true"
+                android:focusable="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_business_type"
+                tools:ignore="RtlSymmetry" />-->
+
+            <com.rabadiya.base.customviews.customtextview.CommonEditText
+                android:id="@+id/et_business_type"
+                style="@style/EdittextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:enabled="true"
+                android:focusable="false"
+                android:hint="@string/res_business_default"
+                android:includeFontPadding="false"
+                android:minHeight="@dimen/_50sdp"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_business_type" />
+
+            <com.rabadiya.base.customviews.customtextview.CommonTextView
+                android:id="@+id/tv_education"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:includeFontPadding="false"
+                android:text="@string/res_education"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_business_type"
+                app:textColor="secondaryOnTheme"
+                app:textSize="dialog"
+                app:textStyle="semiBold" />
+
+            <com.rabadiya.base.customviews.customtextview.CommonEditText
+                android:id="@+id/et_education"
+                style="@style/EdittextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:enabled="true"
+                android:focusable="false"
+                android:hint="@string/res_education_default"
+                android:includeFontPadding="false"
+                android:minHeight="@dimen/_50sdp"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_education" />
+
+            <com.rabadiya.base.customviews.customtextview.CommonTextView
+                android:id="@+id/tv_relation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:includeFontPadding="false"
+                android:text="@string/res_relation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_education"
+                app:textColor="secondaryOnTheme"
+                app:textSize="dialog"
+                app:textStyle="semiBold" />
+
+            <com.rabadiya.base.customviews.customtextview.CommonEditText
+                android:id="@+id/et_relation"
+                style="@style/EdittextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:enabled="true"
+                android:focusable="false"
+                android:hint="@string/res_relation_default"
+                android:includeFontPadding="false"
+                android:minHeight="@dimen/_50sdp"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_relation" />
+
+
+            <com.rabadiya.base.customviews.customtextview.CommonTextView
+                android:id="@+id/tv_blood_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:includeFontPadding="false"
+                android:text="@string/res_blood_group"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_relation"
+                app:textColor="secondaryOnTheme"
+                app:textSize="dialog"
+                app:textStyle="semiBold" />
+
+            <com.rabadiya.base.customviews.customtextview.CommonEditText
+                android:id="@+id/et_blood_group"
+                style="@style/EdittextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:enabled="true"
+                android:focusable="false"
+                android:hint="@string/res_bg_default"
+                android:includeFontPadding="false"
+                android:minHeight="@dimen/_50sdp"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_blood_group" />
+
+
+            <com.rabadiya.base.customviews.customtextview.CommonTextView
+                android:id="@+id/tv_marital_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:includeFontPadding="false"
+                android:text="@string/res_marital_status"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_blood_group"
+                app:textColor="secondaryOnTheme"
+                app:textSize="dialog"
+                app:textStyle="semiBold" />
+
+            <RadioGroup
+                android:id="@+id/rg_marital_status"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:background="@drawable/shape_common_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_marital_status">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:fontFamily="@font/font_medium"
+                    android:includeFontPadding="false"
+                    android:text="@string/res_married"
+                    android:textColor="@color/textSecondaryDark"
+                    android:textSize="16sp"
+                    app:buttonTint="@color/textSecondaryDark" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:fontFamily="@font/font_medium"
+                    android:includeFontPadding="false"
+                    android:text="@string/res_single"
+                    android:textColor="@color/textSecondaryDark"
+                    android:textSize="16sp"
+                    app:buttonTint="@color/textSecondaryDark" />
+
+            </RadioGroup>
+
+            <com.rabadiya.base.customviews.customtextview.CommonTextView
+                android:id="@+id/tv_village"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:includeFontPadding="false"
+                android:text="@string/res_village"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rg_marital_status"
+                app:textColor="secondaryOnTheme"
+                app:textSize="dialog"
+                app:textStyle="semiBold" />
+
+            <com.rabadiya.base.customviews.customtextview.CommonEditText
+                android:id="@+id/et_village"
+                style="@style/EdittextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:enabled="true"
+                android:focusable="false"
+                android:hint="@string/res_village_default"
+                android:includeFontPadding="false"
+                android:minHeight="@dimen/_50sdp"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_village" />
+
+            <com.rabadiya.base.customviews.customtextview.CommonTextView
+                android:id="@+id/tv_residence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:includeFontPadding="false"
+                android:text="@string/res_residence"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_village"
+                app:textColor="secondaryOnTheme"
+                app:textSize="dialog"
+                app:textStyle="semiBold" />
+
+            <com.rabadiya.base.customviews.customtextview.CommonEditText
+                android:id="@+id/et_residence"
+                style="@style/EdittextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:enabled="true"
+                android:focusable="false"
+                android:hint="@string/res_residence_default"
+                android:includeFontPadding="false"
+                android:minHeight="@dimen/_50sdp"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_residence" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/id_proof"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_residence">
+
+                <include
+                    android:id="@+id/ctn_id_proof"
+                    layout="@layout/layout_file_upload" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/ctn_pp_tc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/id_proof">
+
+                <CheckBox
+                    android:id="@+id/cb_pp_tc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    app:buttonTint="@color/textPrimaryDark" />
+
+                <com.rabadiya.base.customviews.customtextview.CommonTextView
+                    android:id="@+id/tv_tc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/terms_and_condition"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_village"
+                    app:textColor="secondaryOnTheme"
+                    app:textSize="dialog"
+                    app:textStyle="semiBold" />
+
+                <com.rabadiya.base.customviews.customtextview.CommonTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text=" / "
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_village"
+                    app:textColor="secondaryOnTheme"
+                    app:textSize="dialog"
+                    app:textStyle="semiBold" />
+
+                <com.rabadiya.base.customviews.customtextview.CommonTextView
+                    android:id="@+id/tv_pp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/privacy_policy"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_village"
+                    app:textColor="secondaryOnTheme"
+                    app:textSize="dialog"
+                    app:textStyle="semiBold" />
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_submit_application"
+                style="@style/ButtonPrimaryTheme"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/res_application_submit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ctn_pp_tc" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

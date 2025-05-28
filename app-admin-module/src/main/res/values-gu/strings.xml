@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="admin_login">એડમિન લૉગિન</string>
+    <string name="enter_user_name">Enter username</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="login">Login</string>
+    <string name="error_username">Please enter username</string>
+    <string name="error_password">Please enter password</string>
+    <string name="admin_loading_message">લોગીન થઇ રહ્યું છે. કૃપા કરી ને રાહ જુઓ...</string>
+    <string name="login_success_message">લોગીન સફળ થયું</string>
+    <string name="res_logout">લોગઆઉટ</string>
+
+    <string name="res_dash_menu_1">નવી એપ્લિકેશનો મેનેજ કરો</string>
+    <string name="res_dash_menu_2">સભ્યશ્રીઓ મેનેજ કરો</string>
+    <string name="res_dash_menu_3">ટ્રસ્ટીશ્રીઓ મેનેજ કરો</string>
+    <string name="res_dash_menu_4">દાતાશ્રીઓ મેનેજ કરો</string>
+    <string name="res_dash_menu_5">ગામ ની યાદી મેનેજ કરો</string>
+    <string name="res_dash_menu_6">મુખ્ય સમિતી મેનેજ કરો</string>
+    <string name="res_dash_menu_7">વિદ્યાર્થી તારલાઓ મેનેજ કરો</string>
+    <string name="res_dash_menu_8">મીટીંગ મેનેજ કરો</string>
+    <string name="res_dash_menu_9">સિદ્ધિઓ મેનેજ કરો</string>
+    <string name="res_dash_menu_10">ગેલેરી મેનેજ કરો</string>
+    <string name="res_dash_menu_11">વ્યવસાય મેનેજ કરો</string>
+    <string name="res_dash_menu_12">આમંત્રણ મેનેજ કરો</string>
+    <string name="res_dash_menu_13">સમાચાર મેનેજ કરો</string>
+    <string name="res_dash_menu_14">જન્મદિવસ મેનેજ કરો</string>
+    <string name="res_dash_menu_15">સંપર્ક મેનેજ કરો</string>
+    <string name="res_dash_menu_16">આપણા સૂચનો મેનેજ કરો</string>
+
+    <!-- Search hints -->
+    <string name="search_application">એપ્લિકેશન શોધો</string>
+
+    <!-- New Applications approve -->
+    <string name="birthday_date">જન્મ તારીખ</string>
+    <string name="address">સરનામું</string>
+    <string name="gender">જાતિ</string>
+    <string name="mobile_number">મોબાઇલ નંબર</string>
+    <string name="email_id">ઈમેલ આઈડી</string>
+    <string name="business">વ્યવસાય</string>
+    <string name="business_type">વ્યવસાય ક્ષેત્ર</string>
+    <string name="eduction">શિક્ષણ</string>
+    <string name="relation">સંબંધ</string>
+    <string name="blood_type">રક્તજૂથ</string>
+    <string name="marital_status">લગ્ન દરજ્જો</string>
+    <string name="village">ગામ</string>
+    <string name="residence">રહેણાંક</string>
+    <string name="approve">મંજૂર કરો</string>
+    <string name="reject">રદ્દ કરો</string>
+
+    <string name="application_review_progress_message">કૃપા કરી ને રાહ જુઓ.</string>
+    <string name="indicate_the_reason_for_rejection">નામંજુરીનું કારણ દર્શાવો</string>
+    <string name="reason_for_rejection_message">નામંજુરીનું કારણ દર્શાવવું જરૂરી</string>
+    <string name="her_indicate_the_reason">અહીં કારણ દર્શાવો</string>
+
+    <string-array name="dashboard_menu_title">
+        <item>@string/res_dash_menu_1</item>
+        <item>@string/res_dash_menu_2</item>
+        <item>@string/res_dash_menu_3</item>
+        <item>@string/res_dash_menu_4</item>
+        <item>@string/res_dash_menu_5</item>
+        <item>@string/res_dash_menu_6</item>
+        <item>@string/res_dash_menu_7</item>
+        <item>@string/res_dash_menu_8</item>
+        <item>@string/res_dash_menu_9</item>
+        <item>@string/res_dash_menu_10</item>
+        <item>@string/res_dash_menu_11</item>
+        <item>@string/res_dash_menu_12</item>
+        <item>@string/res_dash_menu_13</item>
+        <item>@string/res_dash_menu_14</item>
+        <item>@string/res_dash_menu_15</item>
+        <item>@string/res_dash_menu_16</item>
+    </string-array>
+
+    <string-array name="dashboard_menu_icon">
+        <item>@drawable/ic_new_registration</item>
+        <item>@drawable/ic_home_menu_1</item>
+        <item>@drawable/ic_home_menu_2</item>
+        <item>@drawable/ic_home_menu_3</item>
+        <item>@drawable/ic_home_menu_4</item>
+        <item>@drawable/ic_home_menu_5</item>
+        <item>@drawable/ic_home_menu_6</item>
+        <item>@drawable/ic_home_menu_7</item>
+        <item>@drawable/ic_home_menu_8</item>
+        <item>@drawable/ic_home_menu_9</item>
+        <item>@drawable/ic_home_menu_10</item>
+        <item>@drawable/ic_home_menu_11</item>
+        <item>@drawable/ic_home_menu_12</item>
+        <item>@drawable/ic_home_menu_13</item>
+        <item>@drawable/ic_home_menu_14</item>
+        <item>@drawable/ic_home_menu_15</item>
+    </string-array>
+</resources>

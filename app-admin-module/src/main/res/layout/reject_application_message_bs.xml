@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_bottom_sheet_bg"
+    android:paddingHorizontal="@dimen/_6sdp"
+    android:paddingVertical="@dimen/_12sdp">
+
+    <com.rabadiya.base.customviews.customtextview.CommonTextView
+        android:id="@+id/bottomSheetTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_12sdp"
+        android:text="@string/indicate_the_reason_for_rejection"
+        app:layout_constraintEnd_toStartOf="@+id/btnClose"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:textColor="secondaryOnTheme"
+        app:textSize="toolbar"
+        app:textStyle="semiBold" />
+
+    <ImageButton
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:padding="@dimen/_10sdp"
+        android:src="@drawable/ic_bottom_sheet_close"
+        app:layout_constraintBottom_toBottomOf="@id/bottomSheetTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bottomSheetTitle"
+        app:layout_constraintTop_toTopOf="@id/bottomSheetTitle" />
+
+    <com.rabadiya.base.customviews.customtextview.CommonEditText
+        android:id="@+id/etReason"
+        style="@style/EdittextTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:paddingVertical="@dimen/_8sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:hint="@string/her_indicate_the_reason"
+        android:gravity="top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottomSheetTitle" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnReject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ButtonPrimaryTheme"
+        android:text="@string/reject"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/etReason"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

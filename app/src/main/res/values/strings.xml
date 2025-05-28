@@ -1,0 +1,467 @@
+<resources>
+    <string name="app_name" translatable="false">RabadiyaParivarApp</string>
+
+    <string name="app_title">Rabadiya Parivar</string>
+    <string name="res_login" translatable="false">Login</string>
+    <string name="app_slogan">એકતા ~ આદર ~ આનંદ</string>
+    <string name="demo_user_name">રાબડીયા રોશનભાઈ રમેશભાઈ</string>
+    <string name="demo_user_mobile">+૯૧ ૯૫૧૨૫ ૪૬૪૦૦</string>
+
+    <string name="navigation_drawer_open" translatable="false">Open</string>
+    <string name="navigation_drawer_close" translatable="false">Close</string>
+    <string name="res_dummy_text" translatable="false">This is dummy text</string>
+
+    <string name="res_new_registration">નવી નોંધણી</string>
+    <string name="res_new_registrations">નવી નોંધણીઓ</string>
+    <string name="res_ad_registration">જાહેરાત નોંધણી</string>
+    <string name="res_settings">સેટિંગ</string>
+    <string name="res_about_app">એપ્લિકેશન વિશ</string>
+
+    <!-- New Application -->
+    <string name="res_new_application_dialog_title">કૃપા કરીને રાહ જુઓ. તમારી અરજી ની નોંધણી કરવામાં આવી રહી છે.</string>
+    <string name="res_camera_permission_rationale">આ એપ્લિકેશનમાં કેમેરાની પરવાનગી જરૂરી છે. કૃપા કરીને સેટિંગમાંથી પરવાનગી આપો</string>
+    <string name="res_per_dialog_positive_button">પરવાનગી આપો</string>
+    <string name="res_per_dialog_negative_button">રદ કરો</string>
+    <string name="res_no_new_applications">કોઈ નવી નોંધણી નથી</string>
+
+
+
+    <!-- Register New User -->
+    <string name="res_name">નામ *</string>
+    <string name="res_only_your_name">માત્ર તમારું નામ લખો</string>
+    <string name="res_father_or_husband_name">પિતા / પતિ નું નામ *</string>
+    <string name="res_write_only_your_father_or_husband_name">માત્ર તમારા પિતા / પતિ નું નામ લખો</string>
+    <string name="res_birthday_date">જન્મ દિવસની તારીખ *</string>
+    <string name="res_birthday_date_1">જન્મ દિવસની તારીખ</string>
+    <string name="res_address">સરનામું *</string>
+    <string name="res_write_address">સરનામું લખો</string>
+    <string name="res_gender">જાતિ *</string>
+    <string name="res_gender_male">પુરુષ</string>
+    <string name="res_gender_female">સ્ત્રી</string>
+    <string name="res_mobile">મોબાઇલ નંબર *</string>
+    <string name="res_write_mobile">મોબાઇલ નંબર લખો</string>
+    <string name="res_email_id">ઈમેલ આઈડી *</string>
+    <string name="res_write_email_id">ઈમેલ આઈડી લખો</string>
+    <string name="res_password">પાસવર્ડ *</string>
+    <string name="res_write_password">પાસવર્ડ લખો</string>
+    <string name="res_business">વ્યવસાય *</string>
+    <string name="res_type_business">ધંધો</string>
+    <string name="res_type_job">નોકરી</string>
+    <string name="res_type_other">અન્ય</string>
+    <string name="res_business_type">વ્યવસાય ક્ષેત્રે *</string>
+    <string name="res_education">શિક્ષણ</string>
+    <string name="res_relation">સંબંધ</string>
+    <string name="res_blood_group">રક્તજૂથ</string>
+    <string name="res_marital_status">લગ્ન દરજ્જો *</string>
+    <string name="res_married">પરણિત</string>
+    <string name="res_single">સિંગલ</string>
+    <string name="res_village">ગામ *</string>
+    <string name="res_residence">રહેણાંક *</string>
+
+
+    <!-- Business Types -->
+    <string name="res_business_default">વ્યવસાય ક્ષેત્ર પસંદ કરો</string>
+    <string name="res_business_1">હીરા ઉદ્યોગ</string>
+    <string name="res_business_2">ટેક્સટાઇલ્સ અને ગારમેન્ટ</string>
+    <string name="res_business_3">ફૂડ અને ફૂડ પ્રોસેસિંગ</string>
+    <string name="res_business_4">બેકિંગ</string>
+    <string name="res_business_5">રીયલ એસ્ટેટ અને બાંધકામ</string>
+    <string name="res_business_6">ખેતી અને પશુપાલન</string>
+    <string name="res_business_7">શિક્ષણ અને તાલીમ</string>
+    <string name="res_business_8">નાણાકીય સેવા</string>
+    <string name="res_business_9">આરોગ્ય અને તબીબી સેવા</string>
+    <string name="res_business_10">ઇન્ફોરમેશન ટેકનોલોજી</string>
+    <string name="res_business_11">કમ્પ્યુટર એન્જીનીઅર</string>
+    <string name="res_business_12">કાયદા કાનૂની સેવા</string>
+    <string name="res_business_13">કેમિકલ</string>
+    <string name="res_business_14">ઑટોમોબાઇલ</string>
+    <string name="res_business_15">ટેલિકોમ્યુનિકેશન</string>
+    <string name="res_business_16">ઇલેક્ટ્રિક અને ઇલેક્ટ્રોનિક્સ</string>
+    <string name="res_business_17">પ્રિન્ટિંગ અને પેકેજીગ</string>
+    <string name="res_business_18">રાજકારણ</string>
+    <string name="res_business_19">ફોટોગ્રાફી</string>
+    <string name="res_business_20">સરકારી નોકરી</string>
+    <string name="res_business_21">ફેશન ડિઝાઇન</string>
+    <string name="res_business_22">બ્યુટીપાર્લર</string>
+    <string name="res_business_23">ઘરકામ</string>
+    <string name="res_business_24">અન્ય</string>
+
+    <!-- Eduction -->
+    <string name="res_education_default">શિક્ષણ પસંદ કરો</string>
+    <string name="res_education_1">Jr. KG</string>
+    <string name="res_education_2">Sr. KG</string>
+    <string name="res_education_3">1 Std</string>
+    <string name="res_education_4">2 Std</string>
+    <string name="res_education_5">3 Std</string>
+    <string name="res_education_6">4 Std</string>
+    <string name="res_education_7">5 Std</string>
+    <string name="res_education_8">6 Std</string>
+    <string name="res_education_9">7 Std</string>
+    <string name="res_education_10">8 Std</string>
+    <string name="res_education_11">9 Std</string>
+    <string name="res_education_12">10 Std</string>
+    <string name="res_education_13">11 Std (Science)</string>
+    <string name="res_education_14">12 Std (Science)</string>
+    <string name="res_education_15">11 Std (Commerce)</string>
+    <string name="res_education_16">12 Std (Commerce)</string>
+    <string name="res_education_17">11 Std (Arts)</string>
+    <string name="res_education_18">12 Std (Arts)</string>
+    <string name="res_education_19">B.ed</string>
+    <string name="res_education_20">M.ed</string>
+    <string name="res_education_21">B.sc</string>
+    <string name="res_education_22">M.sc</string>
+    <string name="res_education_23">B.com</string>
+    <string name="res_education_24">M.com</string>
+    <string name="res_education_25">BBA</string>
+    <string name="res_education_26">MBA</string>
+    <string name="res_education_27">B.Sc(IT)</string>
+    <string name="res_education_28">M.Sc(IT)</string>
+    <string name="res_education_29">BCA</string>
+    <string name="res_education_30">MCA</string>
+    <string name="res_education_31">DIPLOMA</string>
+    <string name="res_education_32">BE</string>
+    <string name="res_education_33">ME</string>
+    <string name="res_education_34">MS</string>
+    <string name="res_education_35">B.Tech</string>
+    <string name="res_education_36">BA</string>
+    <string name="res_education_37">MA</string>
+    <string name="res_education_38">B.Pharm</string>
+    <string name="res_education_39">M.Pharm</string>
+    <string name="res_education_40">PHD</string>
+    <string name="res_education_41">BHMS</string>
+    <string name="res_education_42">MBBS</string>
+    <string name="res_education_43">MD</string>
+    <string name="res_education_44">M.Phil</string>
+    <string name="res_education_45">BAMS</string>
+    <string name="res_education_46">DBA</string>
+    <string name="res_education_47">C.A</string>
+    <string name="res_education_48">Other</string>
+    <string name="res_education_49">L.L.B</string>
+    <string name="res_education_50">Computer Eng.</string>
+    <string name="res_education_51">ખબર નથી</string>
+    <string name="res_education_52">લિસ્ટ માં નથી</string>
+
+    <!-- Relation -->
+    <string name="res_relation_default">સંબંધ પસંદ કરો</string>
+    <string name="res_relation_1">પોતે</string>
+    <string name="res_relation_2">માતા</string>
+    <string name="res_relation_3">પિતા</string>
+    <string name="res_relation_4">પુત્રી</string>
+    <string name="res_relation_5">પુત્ર</string>
+    <string name="res_relation_6">ભાઈ</string>
+    <string name="res_relation_7">બહેન</string>
+    <string name="res_relation_8">પત્ની</string>
+    <string name="res_relation_9">પતિ</string>
+    <string name="res_relation_10">પુત્રવધુ</string>
+    <string name="res_relation_11">દાદા</string>
+    <string name="res_relation_12">દાદી</string>
+    <string name="res_relation_13">ફઈ</string>
+
+    <!-- Blood Group -->
+    <string name="res_bg_default">રક્તજૂથ પસંદ કરો</string>
+    <string name="res_bg_1">A+</string>
+    <string name="res_bg_2">A-</string>
+    <string name="res_bg_3">B+</string>
+    <string name="res_bg_4">B-</string>
+    <string name="res_bg_5">AB+</string>
+    <string name="res_bg_6">Ab-</string>
+    <string name="res_bg_7">O+</string>
+    <string name="res_bg_8">O-</string>
+    <string name="res_bg_9">ખબર નથી</string>
+
+    <!-- Villages -->
+    <string name="res_village_default">ગામ પસંદ કરો</string>
+    <string name="res_village_1">કેરાળા(વિરડીયા)</string>
+    <string name="res_village_2">ખડખંભાળીયા</string>
+    <string name="res_village_3">રાવણી(કૂબા)</string>
+    <string name="res_village_4">બાંગા</string>
+    <string name="res_village_5">ગુંદાળા</string>
+    <string name="res_village_6">માવજીંજવા</string>
+    <string name="res_village_7">છભાડીયા</string>
+    <string name="res_village_8">લલોઈ</string>
+    <string name="res_village_9">જેતપુર</string>
+    <string name="res_village_10">હળીયાદ</string>
+    <string name="res_village_11">ભાડેર(વાઘેલા)</string>
+    <string name="res_village_12">પીપરડી</string>
+    <string name="res_village_13">શિવેન્દ્રનગર</string>
+    <string name="res_village_14">નવાગામ</string>
+    <string name="res_village_15">જામદાદર</string>
+    <string name="res_village_16">આરબીંબડી</string>
+    <string name="res_village_17">ધરમપુર</string>
+    <string name="res_village_18">તરકતળાવ</string>
+    <string name="res_village_19">પીપરટોડા</string>
+    <string name="res_village_20">નજાપર</string>
+    <string name="res_village_21">હડમતીયા</string>
+    <string name="res_village_22">અર્જુનસુખ</string>
+    <string name="res_village_23">ચારણીયા</string>
+    <string name="res_village_24">ગીરમાધુપુર</string>
+    <string name="res_village_25">સનાળા</string>
+    <string name="res_village_26">સીતાપુર</string>
+    <string name="res_village_27">થોરીયાળી</string>
+    <string name="res_village_28">પ્રભાતપુર</string>
+    <string name="res_village_29">બામણગામ</string>
+    <string name="res_village_30">પચ્છેગામ</string>
+    <string name="res_village_31">બગડુ</string>
+    <string name="res_village_32">ઉકરડા</string>
+    <string name="res_village_33">પાટી</string>
+    <string name="res_village_34">રામપર</string>
+    <string name="res_village_35">વાવડી</string>
+    <string name="res_village_36">લિસ્ટ માં નથી</string>
+
+    <!-- residence -->
+    <string name="res_residence_default">રહેણાંક પસંદ કરો</string>
+    <string name="res_residence_1">સુરત</string>
+    <string name="res_residence_2">અમદાવાદ</string>
+    <string name="res_residence_3">વડોદરા</string>
+    <string name="res_residence_4">રાજકોટ</string>
+    <string name="res_residence_5">ગાંધીનગર</string>
+    <string name="res_residence_6">નવસારી</string>
+    <string name="res_residence_7">વાપી</string>
+    <string name="res_residence_8">અંકલેશ્વર</string>
+    <string name="res_residence_9">મુંબઈ</string>
+    <string name="res_residence_10">અમેરીકા</string>
+    <string name="res_residence_11">કેનેડા</string>
+    <string name="res_residence_12">આફ્રિકા</string>
+    <string name="res_residence_13">હોંગકોંગ</string>
+    <string name="res_residence_14">ઓસ્ટ્રેલિયા</string>
+    <string name="res_residence_15">યુકે</string>
+    <string name="res_residence_16">બેલ્જીયમ</string>
+    <string name="res_residence_17">અન્ય</string>
+    <string name="res_residence_18">માલ્ટા</string>
+    <string name="res_residence_19">ભાવનગર</string>
+    <string name="res_residence_20">ગામડે/દેશમા</string>
+
+    <string name="res_upload_image">અહીં તમારૂં આઈડી પ્રૂફ દર્શાવો. આધારકાર્ડ, લાઇસન્સ કે અન્ય...</string>
+    <string name="res_application_submit">નવી નોંધણી કરો</string>
+    <string name="field_is_required">ક્ષેત્ર જરૂરી છે.</string>
+    <string name="terms_and_condition" translatable="false"><u>Terms and Condition</u></string>
+    <string name="privacy_policy" translatable="false"><u>Privacy Policy</u></string>
+    <string-array name="nav_menu_title">
+        <item>@string/res_new_registration</item>
+        <item>@string/res_ad_registration</item>
+        <item>@string/res_settings</item>
+        <item>@string/res_about_app</item>
+    </string-array>
+
+    <string-array name="nav_menu_icon">
+        <item>@drawable/ic_new_registration</item>
+        <item>@drawable/ic_ad_registration</item>
+        <item>@drawable/ic_settings</item>
+        <item>@drawable/ic_about_app</item>
+    </string-array>
+
+    <string-array name="home_menu_icon">
+        <item>@drawable/ic_home_menu_1</item>
+        <item>@drawable/ic_home_menu_2</item>
+        <item>@drawable/ic_home_menu_3</item>
+        <item>@drawable/ic_home_menu_4</item>
+        <item>@drawable/ic_home_menu_5</item>
+        <item>@drawable/ic_home_menu_6</item>
+        <item>@drawable/ic_home_menu_7</item>
+        <item>@drawable/ic_home_menu_8</item>
+        <item>@drawable/ic_home_menu_9</item>
+        <item>@drawable/ic_home_menu_10</item>
+        <item>@drawable/ic_home_menu_11</item>
+        <item>@drawable/ic_home_menu_12</item>
+        <item>@drawable/ic_home_menu_13</item>
+        <item>@drawable/ic_home_menu_14</item>
+        <item>@drawable/ic_home_menu_15</item>
+    </string-array>
+
+    <string-array name="home_menu_title">
+        <item>@string/res_menu_1</item>
+        <item>@string/res_menu_2</item>
+        <item>@string/res_menu_3</item>
+        <item>@string/res_menu_4</item>
+        <item>@string/res_menu_5</item>
+        <item>@string/res_menu_6</item>
+        <item>@string/res_menu_7</item>
+        <item>@string/res_menu_8</item>
+        <item>@string/res_menu_9</item>
+        <item>@string/res_menu_10</item>
+        <item>@string/res_menu_11</item>
+        <item>@string/res_menu_12</item>
+        <item>@string/res_menu_13</item>
+        <item>@string/res_menu_14</item>
+        <item>@string/res_menu_15</item>
+    </string-array>
+
+    <string-array name="array_business_type">
+        <item>@string/res_business_default</item>
+        <item>@string/res_business_1</item>
+        <item>@string/res_business_2</item>
+        <item>@string/res_business_3</item>
+        <item>@string/res_business_4</item>
+        <item>@string/res_business_5</item>
+        <item>@string/res_business_6</item>
+        <item>@string/res_business_7</item>
+        <item>@string/res_business_8</item>
+        <item>@string/res_business_9</item>
+        <item>@string/res_business_10</item>
+        <item>@string/res_business_11</item>
+        <item>@string/res_business_12</item>
+        <item>@string/res_business_13</item>
+        <item>@string/res_business_14</item>
+        <item>@string/res_business_15</item>
+        <item>@string/res_business_16</item>
+        <item>@string/res_business_17</item>
+        <item>@string/res_business_18</item>
+        <item>@string/res_business_19</item>
+        <item>@string/res_business_20</item>
+        <item>@string/res_business_21</item>
+        <item>@string/res_business_22</item>
+        <item>@string/res_business_23</item>
+        <item>@string/res_business_24</item>
+    </string-array>
+
+    <string-array name="array_eduction">
+        <item>@string/res_education_default</item>
+        <item>@string/res_education_1</item>
+        <item>@string/res_education_2</item>
+        <item>@string/res_education_3</item>
+        <item>@string/res_education_4</item>
+        <item>@string/res_education_5</item>
+        <item>@string/res_education_6</item>
+        <item>@string/res_education_7</item>
+        <item>@string/res_education_8</item>
+        <item>@string/res_education_9</item>
+        <item>@string/res_education_10</item>
+        <item>@string/res_education_11</item>
+        <item>@string/res_education_12</item>
+        <item>@string/res_education_13</item>
+        <item>@string/res_education_14</item>
+        <item>@string/res_education_15</item>
+        <item>@string/res_education_16</item>
+        <item>@string/res_education_17</item>
+        <item>@string/res_education_18</item>
+        <item>@string/res_education_19</item>
+        <item>@string/res_education_20</item>
+        <item>@string/res_education_21</item>
+        <item>@string/res_education_22</item>
+        <item>@string/res_education_23</item>
+        <item>@string/res_education_24</item>
+        <item>@string/res_education_25</item>
+        <item>@string/res_education_26</item>
+        <item>@string/res_education_27</item>
+        <item>@string/res_education_28</item>
+        <item>@string/res_education_29</item>
+        <item>@string/res_education_30</item>
+        <item>@string/res_education_31</item>
+        <item>@string/res_education_32</item>
+        <item>@string/res_education_33</item>
+        <item>@string/res_education_34</item>
+        <item>@string/res_education_35</item>
+        <item>@string/res_education_36</item>
+        <item>@string/res_education_37</item>
+        <item>@string/res_education_38</item>
+        <item>@string/res_education_39</item>
+        <item>@string/res_education_40</item>
+        <item>@string/res_education_41</item>
+        <item>@string/res_education_42</item>
+        <item>@string/res_education_43</item>
+        <item>@string/res_education_44</item>
+        <item>@string/res_education_45</item>
+        <item>@string/res_education_46</item>
+        <item>@string/res_education_47</item>
+        <item>@string/res_education_48</item>
+        <item>@string/res_education_49</item>
+        <item>@string/res_education_50</item>
+        <item>@string/res_education_51</item>
+        <item>@string/res_education_52</item>
+    </string-array>
+
+    <string-array name="array_relation">
+        <item>@string/res_relation_default</item>
+        <item>@string/res_relation_1</item>
+        <item>@string/res_relation_2</item>
+        <item>@string/res_relation_3</item>
+        <item>@string/res_relation_4</item>
+        <item>@string/res_relation_5</item>
+        <item>@string/res_relation_6</item>
+        <item>@string/res_relation_7</item>
+        <item>@string/res_relation_8</item>
+        <item>@string/res_relation_9</item>
+        <item>@string/res_relation_10</item>
+        <item>@string/res_relation_11</item>
+        <item>@string/res_relation_12</item>
+        <item>@string/res_relation_13</item>
+    </string-array>
+
+    <string-array name="array_blood_group">
+        <item>@string/res_bg_default</item>
+        <item>@string/res_bg_1</item>
+        <item>@string/res_bg_2</item>
+        <item>@string/res_bg_3</item>
+        <item>@string/res_bg_4</item>
+        <item>@string/res_bg_5</item>
+        <item>@string/res_bg_6</item>
+        <item>@string/res_bg_7</item>
+        <item>@string/res_bg_8</item>
+        <item>@string/res_bg_9</item>
+    </string-array>
+
+    <string-array name="array_village">
+        <item>@string/res_village_default</item>
+        <item>@string/res_village_1</item>
+        <item>@string/res_village_2</item>
+        <item>@string/res_village_3</item>
+        <item>@string/res_village_4</item>
+        <item>@string/res_village_5</item>
+        <item>@string/res_village_6</item>
+        <item>@string/res_village_7</item>
+        <item>@string/res_village_8</item>
+        <item>@string/res_village_9</item>
+        <item>@string/res_village_10</item>
+        <item>@string/res_village_11</item>
+        <item>@string/res_village_12</item>
+        <item>@string/res_village_13</item>
+        <item>@string/res_village_14</item>
+        <item>@string/res_village_15</item>
+        <item>@string/res_village_16</item>
+        <item>@string/res_village_17</item>
+        <item>@string/res_village_18</item>
+        <item>@string/res_village_19</item>
+        <item>@string/res_village_20</item>
+        <item>@string/res_village_21</item>
+        <item>@string/res_village_22</item>
+        <item>@string/res_village_23</item>
+        <item>@string/res_village_24</item>
+        <item>@string/res_village_25</item>
+        <item>@string/res_village_26</item>
+        <item>@string/res_village_27</item>
+        <item>@string/res_village_28</item>
+        <item>@string/res_village_29</item>
+        <item>@string/res_village_30</item>
+        <item>@string/res_village_31</item>
+        <item>@string/res_village_32</item>
+        <item>@string/res_village_33</item>
+        <item>@string/res_village_34</item>
+        <item>@string/res_village_35</item>
+        <item>@string/res_village_36</item>
+    </string-array>
+
+    <string-array name="array_residence">
+        <item>@string/res_residence_default</item>
+        <item>@string/res_residence_1</item>
+        <item>@string/res_residence_2</item>
+        <item>@string/res_residence_3</item>
+        <item>@string/res_residence_4</item>
+        <item>@string/res_residence_5</item>
+        <item>@string/res_residence_6</item>
+        <item>@string/res_residence_7</item>
+        <item>@string/res_residence_8</item>
+        <item>@string/res_residence_9</item>
+        <item>@string/res_residence_10</item>
+        <item>@string/res_residence_11</item>
+        <item>@string/res_residence_12</item>
+        <item>@string/res_residence_13</item>
+        <item>@string/res_residence_14</item>
+        <item>@string/res_residence_15</item>
+        <item>@string/res_residence_16</item>
+        <item>@string/res_residence_17</item>
+        <item>@string/res_residence_18</item>
+        <item>@string/res_residence_19</item>
+        <item>@string/res_residence_20</item>
+    </string-array>
+
+</resources>

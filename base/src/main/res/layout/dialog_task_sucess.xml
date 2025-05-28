@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/_20sdp"
+    android:paddingVertical="@dimen/_15sdp"
+    android:background="@drawable/shape_dialog_bg">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/iv_anim"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        app:lottie_rawRes="@raw/success"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.rabadiya.base.customviews.customtextview.CommonTextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="@dimen/_190sdp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_anim"
+        android:gravity="center"
+        app:textColor="secondaryOnTheme"
+        app:textSize="primary"
+        app:textStyle="semiBold"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/application_submit_success" />
+
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        android:text="@string/button_ok"
+        android:background="@drawable/button_primary_bg"
+        android:textColor="@color/white"
+        app:textSize="secondary"
+        app:textStyle="regular"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialogTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

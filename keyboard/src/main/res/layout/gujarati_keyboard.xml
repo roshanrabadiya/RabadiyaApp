@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/keyboard_background"
+    android:orientation="horizontal"
+    android:paddingVertical="10dp"
+    android:paddingHorizontal="5dp">
+
+    <LinearLayout
+        android:id="@+id/key_special"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Row 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/key_an"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="અં" />
+
+            <Button
+                android:id="@+id/key_a"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="અ" />
+
+            <Button
+                android:id="@+id/key_aa"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="આ" />
+        </LinearLayout>
+
+        <!-- Row 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/key_ah"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="અઃ" />
+
+            <Button
+                android:id="@+id/key_i"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ઇ" />
+
+            <Button
+                android:id="@+id/key_ii"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ઈ" />
+
+        </LinearLayout>
+
+        <!-- Row 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/key_oh"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ઑ" />
+
+            <Button
+                android:id="@+id/key_u"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ઉ" />
+
+            <Button
+                android:id="@+id/key_uu"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ઊ" />
+
+        </LinearLayout>
+
+        <!-- Row 4 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/key_ru"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ઋ" />
+
+            <Button
+                android:id="@+id/key_e"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="એ" />
+
+            <Button
+                android:id="@+id/key_ai"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ઐ" />
+
+        </LinearLayout>
+
+        <!-- Row 5 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/key_option"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="1/3" />
+
+            <Button
+                android:id="@+id/key_o"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ઓ" />
+
+            <Button
+                android:id="@+id/key_au"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ઔ" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/key_word"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <!-- Row 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/key_ka"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ક" />
+
+            <Button
+                android:id="@+id/key_ca"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ચ" />
+
+            <Button
+                android:id="@+id/key_ta"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ટ" />
+
+            <Button
+                android:id="@+id/key_ta2"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ત" />
+
+            <Button
+                android:id="@+id/key_pa"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="પ" />
+
+            <Button
+                android:id="@+id/key_ya"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ય" />
+
+            <Button
+                android:id="@+id/key_sha2"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ષ" />
+
+        </LinearLayout>
+
+        <!-- Row 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/key_kha"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ખ" />
+
+            <Button
+                android:id="@+id/key_cha"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="છ" />
+
+            <Button
+                android:id="@+id/key_tha"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ઠ" />
+
+            <Button
+                android:id="@+id/key_tha2"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="થ" />
+
+            <Button
+                android:id="@+id/key_pha"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ફ" />
+
+            <Button
+                android:id="@+id/key_ra"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ર" />
+
+            <Button
+                android:id="@+id/key_sa"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="સ" />
+
+        </LinearLayout>
+
+        <!-- Row 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/key_ga"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ગ" />
+
+            <Button
+                android:id="@+id/key_ja"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="જ" />
+
+            <Button
+                android:id="@+id/key_da"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ડ" />
+
+            <Button
+                android:id="@+id/key_da2"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="દ" />
+
+            <Button
+                android:id="@+id/key_ba"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="બ" />
+
+            <Button
+                android:id="@+id/key_la"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="લ" />
+
+            <Button
+                android:id="@+id/key_ha"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="હ" />
+
+        </LinearLayout>
+
+        <!-- Row 4 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/key_gha"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ઘ" />
+
+            <Button
+                android:id="@+id/key_jha"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ઝ" />
+
+            <Button
+                android:id="@+id/key_dha"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ઢ" />
+
+            <Button
+                android:id="@+id/key_dha2"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ધ" />
+
+            <Button
+                android:id="@+id/key_bha"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ભ" />
+
+            <Button
+                android:id="@+id/key_va"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="વ" />
+
+            <Button
+                android:id="@+id/key_dot"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="." />
+
+        </LinearLayout>
+
+        <!-- Row 5 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/key_nga"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ઙ" />
+
+            <Button
+                android:id="@+id/key_nya"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ઞ" />
+
+            <Button
+                android:id="@+id/key_na"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ણ" />
+
+            <Button
+                android:id="@+id/key_na2"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="ન" />
+
+            <Button
+                android:id="@+id/key_ma"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="મ" />
+
+            <Button
+                android:id="@+id/key_sha"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="શ" />
+
+            <Button
+                android:id="@+id/key_delete"
+                style="@style/KeyboardButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="⌫" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

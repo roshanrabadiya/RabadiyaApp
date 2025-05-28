@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/_20sdp"
+    android:paddingVertical="@dimen/_15sdp"
+    android:background="@drawable/shape_dialog_bg">
+
+    <com.rabadiya.base.customviews.customtextview.CommonTextView
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:textColor="secondaryOnTheme"
+        app:textSize="toolbar"
+        app:textStyle="semiBold"
+        tools:text="@string/permission_required"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.rabadiya.base.customviews.customtextview.CommonTextView
+        android:id="@+id/dialog_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:textColor="secondaryOnTheme"
+        app:textSize="secondary"
+        app:textStyle="medium"
+        android:layout_marginTop="@dimen/_10sdp"
+        tools:text="@string/progress_dialog_title_def"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_title" />
+
+    <com.rabadiya.base.customviews.customtextview.CommonTextView
+        android:id="@+id/dialog_button_positive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:textColor="secondaryOnTheme"
+        app:textSize="secondary"
+        app:textStyle="regular"
+        android:layout_marginTop="@dimen/_15sdp"
+        tools:text="Ok"
+        android:padding="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_desc" />
+
+    <com.rabadiya.base.customviews.customtextview.CommonTextView
+        android:id="@+id/dialog_button_negative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:padding="@dimen/_5sdp"
+        app:textColor="secondaryOnTheme"
+        app:textSize="secondary"
+        app:textStyle="regular"
+        tools:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="@id/dialog_button_positive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_desc"
+        app:layout_constraintTop_toTopOf="@id/dialog_button_positive"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintEnd_toStartOf="@id/dialog_button_positive"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

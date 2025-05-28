@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="text_size_primary">16dp</dimen>
+    <dimen name="text_size_secondary">14dp</dimen>
+    <dimen name="text_size_extra_tertiary">10dp</dimen>
+    <dimen name="text_size_tertiary">12dp</dimen>
+    <dimen name="text_size_toolbar">20dp</dimen>
+    <dimen name="text_size_dialog">18dp</dimen>
+    <dimen name="text_size_emoji">32dp</dimen>
+
+    <dimen name="spinner_dropdown_offset">4dp</dimen>
+    <dimen name="spinner_dropdown_horizontal_offset">-4dp</dimen>
+    <dimen name="spinner_dropdown_width">200dp</dimen>
+</resources>

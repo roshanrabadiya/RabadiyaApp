@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    
+    <style name="Theme_Dialog" parent="Theme.AppCompat.Dialog">
+        <item name="windowMinWidthMajor">60%</item>
+        <item name="windowMinWidthMinor">60%</item>
+    </style>
+</resources>

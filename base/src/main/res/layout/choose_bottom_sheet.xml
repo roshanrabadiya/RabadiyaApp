@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/shape_bottom_sheet_bg"
+    android:paddingHorizontal="@dimen/_6sdp">
+
+    <com.rabadiya.base.customviews.customtextview.CommonTextView
+        android:id="@+id/bottom_sheet_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Bottom Sheet Title"
+        android:paddingVertical="@dimen/_12sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        app:textColor="secondaryOnTheme"
+        app:textSize="toolbar"
+        app:textStyle="semiBold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_close"/>
+
+    <ImageButton
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:src="@drawable/ic_bottom_sheet_close"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bottom_sheet_title"
+        app:layout_constraintTop_toTopOf="@id/bottom_sheet_title"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_sheet_title"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_250sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        tools:listitem="@layout/bottom_sheet_item"
+        android:layout_marginBottom="@dimen/_15sdp"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="progress_dialog_title_def">કૃપા કરીને રાહ જુઓ.</string>
+    <string name="permission_required">પરમિશન જરૂરી</string>
+    <string name="button_ok">ઓક</string>
+    <string name="button_cancel">રદ કરો</string>
+    <string name="application_submit_success">તમારી અરજી સફળતાપૂર્વક સબમિટ થઈ છે. અમે તમારી અરજીની સમીક્ષા કરીશું અને તમને ટૂંક સમયમા આ એપ્લિકેશનમાં ઉમેરીશું</string>
+    <string name="common_progress_message">કૃપા કરી ને રાહ જુઓ ડેટા લોડ થઇ રહ્યો છે.</string>
+
+
+    <!-- Home Menu -->
+    <string name="res_menu_1">સભ્યશ્રીઓ</string>
+    <string name="res_menu_2">ટ્રસ્ટીશ્રીઓ</string>
+    <string name="res_menu_3">દાતાશ્રીઓ</string>
+    <string name="res_menu_4">ગામ ની યાદી</string>
+    <string name="res_menu_5">મુખ્ય સમિતી</string>
+    <string name="res_menu_6">વિદ્યાર્થી તારલાઓ</string>
+    <string name="res_menu_7">મીટીંગ</string>
+    <string name="res_menu_8">સિદ્ધિઓ</string>
+    <string name="res_menu_9">ગેલેરી</string>
+    <string name="res_menu_10">વ્યવસાય</string>
+    <string name="res_menu_11">આમંત્રણ</string>
+    <string name="res_menu_12">સમાચાર</string>
+    <string name="res_menu_13">જન્મદિવસ</string>
+    <string name="res_menu_14">સંપર્ક</string>
+    <string name="res_menu_15">આપણા સૂચનો</string>
+    <string name="res_new_registration">નવી નોંધણી</string>
+    <string name="res_ad_registration">જાહેરાત નોંધણી</string>
+
+    <!-- Errors -->
+    <string name="something_went_wrong">કૃપા કરીને થોડા સમય પછી ફરી પ્રયાસ કરો.</string>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="theme_white">#000000</color>
+    <color name="keyboard_background">#0A0A0A</color>
+    <color name="button_background">#2D2D2D</color>
+    <color name="button_text_color">#FAFAFA</color>
+</resources>

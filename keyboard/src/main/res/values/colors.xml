@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="theme_white">#FFFFFFFF</color>
+    <color name="keyboard_background">#E6E6E6</color>
+    <color name="button_background">#FDFDFD</color>
+    <color name="button_text_color">#292929</color>
+</resources>

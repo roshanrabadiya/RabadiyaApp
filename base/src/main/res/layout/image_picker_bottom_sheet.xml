@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/_20sdp"
+    android:background="@drawable/shape_bottom_sheet_bg">
+
+    <com.rabadiya.base.customviews.customtextview.CommonTextView
+        android:id="@+id/bottom_sheet_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="પસંદ કરો"
+        android:paddingVertical="@dimen/_12sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        app:textColor="secondaryOnTheme"
+        app:textSize="toolbar"
+        app:textStyle="semiBold"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <RelativeLayout
+        android:id="@+id/btn_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/image_picker_button_bg"
+        app:layout_constraintEnd_toStartOf="@+id/btn_gallery"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_title">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_20sdp"
+            android:src="@drawable/ic_camera" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/image_picker_button_bg"
+        app:layout_constraintEnd_toStartOf="@+id/btn_remove"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_title"
+        app:layout_constraintStart_toEndOf="@+id/btn_camera"
+        tools:layout_editor_absoluteY="26dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_20sdp"
+            android:src="@drawable/ic_gallery" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/image_picker_button_bg"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_title"
+        app:layout_constraintStart_toEndOf="@+id/btn_gallery"
+        tools:layout_editor_absoluteY="26dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_20sdp"
+            android:src="@drawable/ic_remove" />
+
+    </RelativeLayout>
+
+    <com.rabadiya.base.customviews.customtextview.CommonTextView
+        android:id="@+id/tv_camera"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:textSize="primary"
+        app:textStyle="semiBold"
+        android:text="કેમેરા"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_camera"
+        app:layout_constraintStart_toStartOf="@+id/btn_camera"
+        app:layout_constraintTop_toBottomOf="@+id/btn_camera"/>
+
+    <com.rabadiya.base.customviews.customtextview.CommonTextView
+        android:id="@+id/tv_gallery"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:textColor="primaryOnTheme"
+        app:textSize="primary"
+        app:textStyle="semiBold"
+        android:text="ગેલેરી"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_gallery"
+        app:layout_constraintStart_toStartOf="@+id/btn_gallery"
+        app:layout_constraintTop_toBottomOf="@+id/btn_gallery"/>
+
+    <com.rabadiya.base.customviews.customtextview.CommonTextView
+        android:id="@+id/tv_remove"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:textColor="primaryOnTheme"
+        app:textSize="primary"
+        app:textStyle="semiBold"
+        android:text="કાઢી નાંખો"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_remove"
+        app:layout_constraintStart_toStartOf="@+id/btn_remove"
+        app:layout_constraintTop_toBottomOf="@+id/btn_remove"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
