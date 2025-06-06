@@ -38,6 +38,8 @@ data class Applications(
     var document: String? = null,
     var profileImage: String? = null,
     var isReviewed: Boolean? = null,
+    val applicationStatus: String? = null,
+    var rejectReason: String? = null,
     var createdAt: String? = null,
     var updatedAt: String? = null,
 ) : Parcelable

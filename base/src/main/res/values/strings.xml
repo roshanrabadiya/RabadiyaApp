@@ -6,6 +6,7 @@
     <string name="button_cancel">રદ કરો</string>
     <string name="application_submit_success">તમારી અરજી સફળતાપૂર્વક સબમિટ થઈ છે. અમે તમારી અરજીની સમીક્ષા કરીશું અને તમને ટૂંક સમયમા આ એપ્લિકેશનમાં ઉમેરીશું</string>
     <string name="common_progress_message">કૃપા કરી ને રાહ જુઓ ડેટા લોડ થઇ રહ્યો છે.</string>
+    <string name="search_by_name_or_village">નામ અથવા ગામ દ્વારા શોધો</string>
 
 
     <!-- Home Menu -->
@@ -29,4 +30,5 @@
 
     <!-- Errors -->
     <string name="something_went_wrong">કૃપા કરીને થોડા સમય પછી ફરી પ્રયાસ કરો.</string>
+    <string name="no_data">કોઈ ડેટા નથી</string>
 </resources>

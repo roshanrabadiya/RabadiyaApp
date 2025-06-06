@@ -35,10 +35,12 @@ open class BaseViewModel : ViewModel() {
             try {
                 val response = request()
                 if (response.isSuccessful && response.body() != null && response.code() == successCode) {
+                    LOGI(TAG, "makeApiCall: ${response}")
                     stateFlow.value = Resource.Success(response.body())
                 } else {
                     val errorMessage = errorHandler?.invoke(response) ?: extractErrorMessage(response)
                     stateFlow.value = Resource.Error(errorMessage)
+                    LOGI(TAG, "makeApiCall: ${errorMessage}")
                 }
             } catch (e: Exception) {
                 LOGI(TAG, "makeApiCall: ${e.message}")

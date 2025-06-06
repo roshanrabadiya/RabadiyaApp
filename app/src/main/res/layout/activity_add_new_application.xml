@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/appBackground"
-    tools:context=".presentation.new_application.AddNewApplicationActivity">
+    tools:context=".presentation.new_application.view.AddNewApplicationActivity">
 
     <RelativeLayout
         android:id="@+id/toolbar_container"

@@ -51,6 +51,10 @@
     <string name="reason_for_rejection_message">નામંજુરીનું કારણ દર્શાવવું જરૂરી</string>
     <string name="her_indicate_the_reason">અહીં કારણ દર્શાવો</string>
 
+    <string name="res_no_new_applications">કોઈ નવી નોંધણી નથી</string>
+
+
+
     <string-array name="dashboard_menu_title">
         <item>@string/res_dash_menu_1</item>
         <item>@string/res_dash_menu_2</item>

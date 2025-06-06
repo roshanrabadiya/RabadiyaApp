@@ -12,8 +12,8 @@ import androidx.core.content.FileProvider
 import androidx.lifecycle.lifecycleScope
 import com.apps.rabadiyaparivarapp.R
 import com.apps.rabadiyaparivarapp.databinding.ActivityRegisterNewMemberBinding
-import com.apps.rabadiyaparivarapp.presentation.new_application.AddNewApplicationActivity
-import com.apps.rabadiyaparivarapp.viewModel.NewApplicationViewModel
+import com.apps.rabadiyaparivarapp.presentation.new_application.view.AddNewApplicationActivity
+import com.apps.rabadiyaparivarapp.presentation.new_application.viewmodel.NewApplicationViewModel
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.rabadiya.base.activity.BaseActivity
 import com.rabadiya.base.common.Resource
@@ -242,8 +242,8 @@ class RegisterNewMemberActivity :
             }
 
             btnSubmitApplication.setOnClickListener {
+                showLoading(getStrings(R.string.res_new_application_dialog_title))
                 validateFields { allFields ->
-                    showLoading(getStrings(R.string.res_new_application_dialog_title))
                     apiCall(allFields)
                 }
             }

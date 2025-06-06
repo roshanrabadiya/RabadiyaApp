@@ -22,7 +22,10 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.new_application.AddNewApplicationActivity"
+            android:name=".presentation.detail.view.MenuDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.new_application.view.AddNewApplicationActivity"
             android:exported="false" />
         <activity
             android:name=".presentation.register.RegisterNewMemberActivity"

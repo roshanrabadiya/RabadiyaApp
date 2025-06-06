@@ -9,7 +9,8 @@ import com.rabadiya.base.model.home.MenuData
 import com.rabadiya.base.utils.showGlideImage
 
 class HomeMenuAdapter(
-    private val context: Context, private val dataList: List<MenuData>
+    private val context: Context, private val dataList: List<MenuData>,
+    private val onItemClick: (Int, MenuData) -> Unit
 ) : RecyclerView.Adapter<HomeMenuAdapter.HomeMenuViewHolder>() {
 
     inner class HomeMenuViewHolder(val binding: HomeMainMenuItemBinding) :
@@ -31,6 +32,10 @@ class HomeMenuAdapter(
         holder.binding.apply {
             context.showGlideImage(dataItem.menuIcon, menuIcon)
             menuTitle.text = dataItem.menuTitle
+
+            root.setOnClickListener {
+                onItemClick(position, dataItem)
+            }
         }
     }
 }

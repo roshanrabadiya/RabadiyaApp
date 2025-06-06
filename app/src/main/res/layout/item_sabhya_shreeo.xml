@@ -36,17 +36,10 @@
             app:layout_constraintStart_toEndOf="@+id/iv_image"
             app:layout_constraintTop_toTopOf="@+id/iv_image">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:weightSum="1"
-                android:orientation="horizontal">
-
             <com.rabadiya.base.customviews.customtextview.CommonTextView
                 android:id="@+id/tvName"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.7"
                 android:layout_gravity="start"
                 android:gravity="start"
                 android:includeFontPadding="false"
@@ -56,26 +49,7 @@
                 app:textColor="primaryOnTheme"
                 app:textSize="primary"
                 app:textStyle="semiBold"
-                android:maxLines="1"
-                android:ellipsize="end"
                 tools:text="@string/res_dash_menu_1" />
-
-            <com.rabadiya.base.customviews.customtextview.CommonTextView
-                android:id="@+id/tvStatus"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.3"
-                android:layout_gravity="start"
-                android:gravity="center"
-                android:includeFontPadding="false"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:textColor="@color/colorPending"
-                app:textSize="secondary"
-                app:textStyle="regular"
-                tools:text="Pending" />
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -85,19 +59,20 @@
                 android:layout_marginTop="@dimen/_5sdp">
 
                 <com.rabadiya.base.customviews.customtextview.CommonTextView
-                    android:id="@+id/tvVillageName"
+                    android:id="@+id/tvSabhyaNo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:gravity="start|center_vertical"
                     android:includeFontPadding="false"
+                    tools:text="સભ્ય નં: ૧"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:textColor="secondaryOnTheme"
                     app:textSize="secondary"
-                    app:textStyle="regular"
-                    tools:text="રાવણી(કૂબા)" />
+                    app:textStyle="regular" />
 
                 <com.rabadiya.base.customviews.customtextview.CommonTextView
                     android:id="@+id/tvDivider"
@@ -117,21 +92,21 @@
                     app:textStyle="regular" />
 
                 <com.rabadiya.base.customviews.customtextview.CommonTextView
-                    android:id="@+id/tvApplicationDate"
+                    android:id="@+id/tvVillageName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
-                    android:layout_marginStart="@dimen/_5sdp"
-                    android:layout_marginTop="@dimen/_5sdp"
                     android:gravity="start|center_vertical"
                     android:includeFontPadding="false"
-                    tools:text="૧૭-૦૪-૨૦૨૫"
+                    android:layout_marginStart="@dimen/_5sdp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:textColor="secondaryOnTheme"
                     app:textSize="secondary"
-                    app:textStyle="regular" />
+                    app:textStyle="regular"
+                    tools:text="રાવણી(કૂબા)" />
+
             </LinearLayout>
 
         </LinearLayout>

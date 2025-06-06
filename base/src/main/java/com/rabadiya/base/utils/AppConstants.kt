@@ -35,5 +35,23 @@ const val MENU_JANMA_DIVAS = 13
 const val MENU_SAMPARK = 14
 const val MENU_AAPNA_SUCHANO = 15
 
+
+// Home Menu
+const val HOME_SHABYON_SHREEO = 0
+const val HOME_TRUSTEE_SHREEO = 1
+const val HOME_DATA_SHREEO = 2
+const val HOME_GAM_NI_YADI = 3
+const val HOME_MUKYA_SAMITI = 4
+const val HOME_VIDHYARTHI_TRALAO = 5
+const val HOME_MEETING = 6
+const val HOME_SIDDHIO = 7
+const val HOME_GALLERY = 8
+const val HOME_VYVSAY = 9
+const val HOME_AAMANTRAN = 10
+const val HOME_SMACHAR = 11
+const val HOME_JANMA_DIVAS = 12
+const val HOME_SAMPARK = 13
+const val HOME_AAPNA_SUCHANO = 14
+
 // Local server ip
-const val LOCAL_SERVER_IP = "192.168.1.5"
+const val LOCAL_SERVER_IP = "192.168.199.131"

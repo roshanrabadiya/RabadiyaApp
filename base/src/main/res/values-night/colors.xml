@@ -25,4 +25,9 @@
 
     <!-- background -->
     <color name="transparent50">#3F000000</color>
+
+    <!-- Status colors -->
+    <color name="colorPending">#D36C51</color>
+    <color name="colorSuccess">#77BC7A</color>
+    <color name="colorFail">#C33131</color>
 </resources>

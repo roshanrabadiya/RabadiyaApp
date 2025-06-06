@@ -10,7 +10,10 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.annotation.ColorInt
+import androidx.annotation.ColorRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
@@ -64,6 +67,10 @@ fun getAndroidDeviceId(context: Context): String {
 val backgroundScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
 val mainScope = CoroutineScope(Dispatchers.Main)
+
+fun Context.getColors(@ColorRes color: Int): Int {
+    return ContextCompat.getColor(this, color)
+}
 
 fun Context.showToast(message: String, duration: Int = Toast.LENGTH_SHORT) {
     Toast.makeText(this, message, duration).show()

@@ -2,7 +2,6 @@ package com.rrr.app_admin_module.presentation.manage.fragment
 
 import android.app.Activity
 import android.content.Intent
-import android.content.res.Configuration
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.activity.result.ActivityResult
@@ -11,19 +10,19 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.rabadiya.base.activity.BaseFragment
 import com.rabadiya.base.adapters.GenericAdapter
-import com.rabadiya.base.common.Logging.LOGI
 import com.rabadiya.base.common.Resource
+import com.rabadiya.base.common.getStrings
 import com.rabadiya.base.model.new_application.Applications
 import com.rabadiya.base.utils.Constants.EXTRA_DATA
-import com.rabadiya.base.utils.Constants.EXTRA_RESULT_CODE
-import com.rabadiya.base.utils.TAG
 import com.rabadiya.base.utils.afterTextChanged
 import com.rabadiya.base.utils.formatDateToGujarati
-import com.rabadiya.base.utils.launchActivity
+import com.rabadiya.base.utils.hide
 import com.rabadiya.base.utils.loadImage
 import com.rabadiya.base.utils.setSafeOnClickListener
+import com.rabadiya.base.utils.show
 import com.rabadiya.base.utils.showErrorToast
 import com.rabadiya.base.utils.showToast
+import com.rrr.app_admin_module.R
 import com.rrr.app_admin_module.databinding.FragmentNewApplicationBinding
 import com.rrr.app_admin_module.databinding.ItemNewApplicationsBinding
 import com.rrr.app_admin_module.presentation.login.viewmodel.NewApplicationViewModel
@@ -43,9 +42,10 @@ class NewApplicationFragment : BaseFragment<FragmentNewApplicationBinding>() {
     private var adapter: GenericAdapter<Applications, *>? = null
 
 
-    private val activityLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-        handleResult(result)
-    }
+    private val activityLauncher =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            handleResult(result)
+        }
 
     override fun getViewBinding(
         inflater: LayoutInflater,
@@ -70,7 +70,10 @@ class NewApplicationFragment : BaseFragment<FragmentNewApplicationBinding>() {
 
             if (query.length > 2) {
                 val found = adapter?.filter { user ->
-                    "${user.firstName} ${user.fatherHusbundName}".contains(query, ignoreCase = true) ||
+                    "${user.firstName} ${user.fatherHusbundName}".contains(
+                        query,
+                        ignoreCase = true
+                    ) ||
                             user.firstName?.contains(query, ignoreCase = true) == true ||
                             user.fatherHusbundName?.contains(query, ignoreCase = true) == true
                 }
@@ -96,26 +99,42 @@ class NewApplicationFragment : BaseFragment<FragmentNewApplicationBinding>() {
         job?.cancel()
         job = lifecycleScope.launch {
             viewModel.allApplication.collect { states ->
-                when(states) {
+                when (states) {
                     is Resource.Loading -> {
                         showLoading()
                     }
+
                     is Resource.Success -> {
                         job?.cancel()
                         hideLoading()
                         states.data?.data?.let { mData ->
                             if (mData.applicationsList.isNotEmpty()) {
+                                binding.incNoData.main.hide()
+                                binding.rvcNewApplication.show()
+                                binding.etSearch.show()
                                 if (page == 1) {
                                     applications.clear()
                                 }
                                 applications.addAll(mData.applicationsList)
                                 adapter?.updateList(applications)
+                            } else {
+                                binding.incNoData.tvMessage.text =
+                                    requireContext().getStrings(R.string.res_no_new_applications)
+                                binding.incNoData.main.show()
+                                binding.rvcNewApplication.hide()
+                                binding.etSearch.hide()
                             }
                         }
                     }
+
                     is Resource.Error -> {
                         job?.cancel()
                         hideLoading()
+                        binding.incNoData.tvMessage.text =
+                            requireContext().getStrings(R.string.res_no_new_applications)
+                        binding.incNoData.main.show()
+                        binding.rvcNewApplication.hide()
+                        binding.etSearch.hide()
                         states.data?.errorMessage?.let { errorMessage ->
                             requireContext().showErrorToast(errorMessage)
                         }
@@ -156,7 +175,7 @@ class NewApplicationFragment : BaseFragment<FragmentNewApplicationBinding>() {
     }
 
     private fun handleResult(result: ActivityResult) {
-        when(result.resultCode) {
+        when (result.resultCode) {
             Activity.RESULT_OK -> {
                 result.data?.let { data ->
                     val applicationId = data.getStringExtra(EXTRA_DATA)

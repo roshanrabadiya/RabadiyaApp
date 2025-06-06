@@ -226,6 +226,9 @@
     <string name="res_application_submit">નવી નોંધણી કરો</string>
     <string name="field_is_required">ક્ષેત્ર જરૂરી છે.</string>
 
+    <!-- Sabhya Shreeo -->
+    <string name="sabhya_no">સભ્ય નં: %d</string>
+
     <!-- Errors -->
     <string name="something_went_wrong">કૃપા કરીને થોડા સમય પછી ફરી પ્રયાસ કરો.</string>
 

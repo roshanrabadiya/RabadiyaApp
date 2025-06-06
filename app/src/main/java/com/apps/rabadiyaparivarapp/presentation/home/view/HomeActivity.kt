@@ -23,12 +23,13 @@ import androidx.viewpager2.widget.ViewPager2
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
 import com.apps.rabadiyaparivarapp.R
 import com.apps.rabadiyaparivarapp.databinding.ActivityHomeBinding
+import com.apps.rabadiyaparivarapp.presentation.detail.view.MenuDetailActivity
 import com.apps.rabadiyaparivarapp.presentation.home.adapter.DrawerAdapter
 import com.apps.rabadiyaparivarapp.presentation.home.adapter.HomeMenuAdapter
 import com.apps.rabadiyaparivarapp.presentation.home.adapter.SlideAdapter
-import com.apps.rabadiyaparivarapp.presentation.new_application.AddNewApplicationActivity
+import com.apps.rabadiyaparivarapp.presentation.new_application.view.AddNewApplicationActivity
 import com.apps.rabadiyaparivarapp.presentation.register.RegisterNewMemberActivity
-import com.apps.rabadiyaparivarapp.viewModel.HomeViewModel
+import com.apps.rabadiyaparivarapp.presentation.home.viewmodel.HomeViewModel
 import com.rabadiya.base.activity.BaseActivity
 import com.rabadiya.base.common.PreferenceKey.KEY_ADMIN_ID
 import com.rabadiya.base.common.PreferenceKey.KEY_ADMIN_USERNAME
@@ -37,7 +38,10 @@ import com.rabadiya.base.customviews.customtextview.CommonTextView
 import com.rabadiya.base.model.home.MenuData
 import com.rabadiya.base.model.home.NavItem
 import com.rabadiya.base.model.home.SliderItem
+import com.rabadiya.base.utils.Constants
 import com.rabadiya.base.utils.Constants.EXTRA_DATA
+import com.rabadiya.base.utils.Constants.EXTRA_POSITION
+import com.rabadiya.base.utils.HOME_SHABYON_SHREEO
 import com.rabadiya.base.utils.androidDeviceId
 import com.rabadiya.base.utils.getAndroidDeviceId
 import com.rabadiya.base.utils.launchActivity
@@ -175,7 +179,6 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(ActivityHomeBinding::infl
         }
     }
 
-
     /**
      * create a home sliders
      * */
@@ -273,7 +276,12 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(ActivityHomeBinding::infl
 
         binding.apply {
             rvMainMenu.layoutManager = GridLayoutManager(this@HomeActivity, 3)
-            homeMenuAdapter = HomeMenuAdapter(this@HomeActivity, homeMenuList)
+            homeMenuAdapter = HomeMenuAdapter(this@HomeActivity, homeMenuList) { position, dataItem ->
+                launchActivity<MenuDetailActivity> {
+                    putExtra(EXTRA_POSITION, position)
+                    putExtra(EXTRA_DATA, dataItem.menuTitle)
+                }
+            }
             rvMainMenu.adapter = homeMenuAdapter
         }
 

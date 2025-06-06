@@ -7,3 +7,10 @@ data class BaseResponse<T>(
     val data: T? = null,
     val errorMessage: String? = null
 )
+
+data class Pagination(
+    val currentPage: Int,
+    val limit: Int,
+    val totalPages: Int,
+    val totalCount: Int
+)

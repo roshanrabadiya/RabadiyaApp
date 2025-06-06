@@ -43,6 +43,9 @@ class AdminDashboardActivity :
         createDashboardMenu()
     }
 
+    /**
+     * set action bar
+     * */
     private fun setActionBar() {
         setSupportActionBar(binding.viewToolbar.toolbar)
         supportActionBar?.apply {
@@ -57,6 +60,9 @@ class AdminDashboardActivity :
         }
     }
 
+    /**
+     * get data from intent
+     * */
     private fun createDashboardMenu() {
         val dashboardMenuList = arrayListOf<DashboardMenuModel>()
 

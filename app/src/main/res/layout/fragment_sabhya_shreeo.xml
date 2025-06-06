@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/appBackground"
-    android:orientation="vertical"
-    tools:context=".presentation.manage.fragment.NewApplicationFragment">
+    tools:context=".presentation.detail.view.fragments.SabhyaShreeoFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
@@ -37,7 +36,7 @@
                     android:layout_marginTop="@dimen/_12sdp"
                     android:drawableStart="@drawable/ic_search"
                     android:drawablePadding="@dimen/_6sdp"
-                    android:hint="@string/search_application"
+                    android:hint="@string/search_by_name_or_village"
                     android:maxLines="1"
                     android:paddingHorizontal="@dimen/_10sdp"
                     android:paddingVertical="@dimen/_10sdp"
@@ -49,7 +48,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvc_new_application"
+        android:id="@+id/rvcSabhyaShreeo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
@@ -59,6 +58,7 @@
     <include
         android:id="@+id/incNoData"
         layout="@layout/common_no_data_layout"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />

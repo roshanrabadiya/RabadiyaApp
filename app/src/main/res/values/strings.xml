@@ -25,7 +25,6 @@
     <string name="res_no_new_applications">કોઈ નવી નોંધણી નથી</string>
 
 
-
     <!-- Register New User -->
     <string name="res_name">નામ *</string>
     <string name="res_only_your_name">માત્ર તમારું નામ લખો</string>
@@ -236,6 +235,10 @@
     <string name="field_is_required">ક્ષેત્ર જરૂરી છે.</string>
     <string name="terms_and_condition" translatable="false"><u>Terms and Condition</u></string>
     <string name="privacy_policy" translatable="false"><u>Privacy Policy</u></string>
+
+    <!-- Sabhya Shreeo -->
+    <string name="sabhya_no">સભ્ય નં: %d</string>
+
     <string-array name="nav_menu_title">
         <item>@string/res_new_registration</item>
         <item>@string/res_ad_registration</item>
@@ -463,5 +466,7 @@
         <item>@string/res_residence_19</item>
         <item>@string/res_residence_20</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

@@ -10,6 +10,7 @@ import com.rabadiya.parivar.network_module.domain.ApiHelper
 import com.rabadiya.parivar.network_module.repository.CreateTokenRepository
 import com.rabadiya.parivar.network_module.repository.admin.AdminRepository
 import com.rabadiya.parivar.network_module.repository.newaccount.NewApplicationRepository
+import com.rabadiya.parivar.network_module.repository.sabhyoshree.SabhyaShreeoRepository
 import com.rabadiya.parivar.network_module.retrofit.AuthInterceptor
 import com.rabadiya.parivar.network_module.retrofit.RabadiyaAdminApi
 import com.rabadiya.parivar.network_module.retrofit.RabadiyaApi
@@ -39,10 +40,11 @@ val networkModule = module {
     // Repository
     single { NewApplicationRepository(get()) }
     single { AdminRepository(get()) }
+    single { SabhyaShreeoRepository(get()) }
 }
 
 fun provideBaseURL(): String {
-    return "http://192.168.1.5:5500/api/v1/" //BuildConfig.BASE_URL
+    return "http://192.168.199.131:5500/api/v1/" //BuildConfig.BASE_URL
 }
 
 fun provideRetrofit(okHttpClient: OkHttpClient, baseUrl: String): Retrofit {
