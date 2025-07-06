@@ -71,4 +71,7 @@ dependencies {
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.retrofit2.kotlin.coroutines.adapter)
 
+    // Google android FlexBox
+    implementation(libs.flexbox)
+
 }

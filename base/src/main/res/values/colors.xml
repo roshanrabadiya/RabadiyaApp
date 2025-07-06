@@ -23,4 +23,7 @@
     <color name="colorPending">#D36C51</color>
     <color name="colorSuccess">#77BC7A</color>
     <color name="colorFail">#C33131</color>
+
+    <!--Button Ripple-->
+    <color name="white20Alpha">#33FFFFFF</color>
 </resources>

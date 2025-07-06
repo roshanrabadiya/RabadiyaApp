@@ -6,4 +6,5 @@ object PreferenceKey {
     const val KEY_API_TOKEN = "api_token"
     const val KEY_ADMIN_ID = "admin_id"
     const val KEY_ADMIN_USERNAME = "admin_username"
+    const val KEY_TEMP_TOKEN = "temp_token"
 }

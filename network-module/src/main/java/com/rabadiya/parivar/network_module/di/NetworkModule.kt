@@ -2,12 +2,10 @@ package com.rabadiya.parivar.network_module.di
 
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.rabadiya.base.common.AppPreference
-import com.rabadiya.parivar.network_module.common.TokenManager
 import com.rabadiya.parivar.network_module.data.AdminApiHelperImpl
 import com.rabadiya.parivar.network_module.data.ApiHelperImpl
 import com.rabadiya.parivar.network_module.domain.AdminApiHelper
 import com.rabadiya.parivar.network_module.domain.ApiHelper
-import com.rabadiya.parivar.network_module.repository.CreateTokenRepository
 import com.rabadiya.parivar.network_module.repository.admin.AdminRepository
 import com.rabadiya.parivar.network_module.repository.newaccount.NewApplicationRepository
 import com.rabadiya.parivar.network_module.repository.sabhyoshree.SabhyaShreeoRepository
@@ -29,9 +27,6 @@ val networkModule = module {
     factory { provideRetrofit(get(), get()) }
     factory { provideRabadiyaApi(get()) }
     factory { provideRabadiyaAdminApi(get()) }
-    factory { TokenManager(get(), get(), get()) }
-
-    single { CreateTokenRepository(get()) }
     single<ApiHelper> {
         ApiHelperImpl(get())
     }
@@ -44,7 +39,7 @@ val networkModule = module {
 }
 
 fun provideBaseURL(): String {
-    return "http://192.168.199.131:5500/api/v1/" //BuildConfig.BASE_URL
+    return "http://10.135.136.131:5500/api/v1/" //BuildConfig.BASE_URL
 }
 
 fun provideRetrofit(okHttpClient: OkHttpClient, baseUrl: String): Retrofit {

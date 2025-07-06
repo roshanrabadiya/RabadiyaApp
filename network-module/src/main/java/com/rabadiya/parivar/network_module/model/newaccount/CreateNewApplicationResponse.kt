@@ -11,6 +11,8 @@ data class CreateNewApplicationResponse(
     var message: String = "",
     @SerializedName("applicationId")
     var applicationId: Int?,
+    @SerializedName("token")
+    var token: String = "",
     @SerializedName("error")
     var error: String = ""
 )

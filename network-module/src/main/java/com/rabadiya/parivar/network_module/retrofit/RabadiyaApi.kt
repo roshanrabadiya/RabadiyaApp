@@ -23,11 +23,6 @@ import retrofit2.http.PartMap
 import retrofit2.http.Query
 
 interface RabadiyaApi {
-
-    @FormUrlEncoded
-    @POST("create-token")
-    fun createToken(@Field("deviceId") deviceId: String): Call<CreateTokenResponse>
-
     @Multipart
     @POST("applications/create")
     suspend fun newApplication(

@@ -16,6 +16,8 @@ import com.apps.rabadiyaparivarapp.presentation.new_application.view.AddNewAppli
 import com.apps.rabadiyaparivarapp.presentation.new_application.viewmodel.NewApplicationViewModel
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.rabadiya.base.activity.BaseActivity
+import com.rabadiya.base.common.Logging.LOGI
+import com.rabadiya.base.common.PreferenceKey.KEY_TEMP_TOKEN
 import com.rabadiya.base.common.Resource
 import com.rabadiya.base.common.getStrings
 import com.rabadiya.base.permissions.PermissionManagerImpl
@@ -31,6 +33,7 @@ import com.rabadiya.base.widget.bottomsheet.ChooseBottomSheetDialog
 import com.rabadiya.base.widget.bottomsheet.ImagePickerBottomSheet
 import com.rabadiya.base.widget.dialog.CommonDialog
 import com.rabadiya.base.widget.dialog.TaskSuccessDialog
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -140,6 +143,8 @@ class RegisterNewMemberActivity :
                         hideLoading()
                         result.data?.let {
                             if (it.status) {
+                                LOGI("TAG", "Api Token: ${it.data?.token}")
+                                sessionManager.saveData(KEY_TEMP_TOKEN, it.data?.token ?: "")
                                 showSuccess()
                             }
                         }
@@ -243,9 +248,12 @@ class RegisterNewMemberActivity :
 
             btnSubmitApplication.setOnClickListener {
                 showLoading(getStrings(R.string.res_new_application_dialog_title))
-                validateFields { allFields ->
-                    apiCall(allFields)
+                lifecycleScope.launch(Dispatchers.IO) {
+                    validateFields { allFields ->
+                        apiCall(allFields)
+                    }
                 }
+
             }
 
             ctnProfile.setOnClickListener {
@@ -356,6 +364,7 @@ class RegisterNewMemberActivity :
                 requireFields["firstName"] = etName.trimString()
             } else {
                 main.showSnackBar("કૃપા કરીને નામ દાખલ કરો")
+                hideLoading()
                 return
             }
 
@@ -363,6 +372,7 @@ class RegisterNewMemberActivity :
                 requireFields["fatherHusbundName"] = etFatherHusbandName.trimString()
             } else {
                 main.showSnackBar("કૃપા કરીને પિતા / પતિ નું નામ દાખલ કરો")
+                hideLoading()
                 return
             }
 
@@ -370,6 +380,7 @@ class RegisterNewMemberActivity :
                 requireFields["birthDate"] = etBirthDate.trimString()
             } else {
                 main.showSnackBar("કૃપા કરીને જન્મ તારીખ દાખલ કરો")
+                hideLoading()
                 return
             }
 
@@ -377,6 +388,7 @@ class RegisterNewMemberActivity :
                 requireFields["address"] = etAddress.text.toString()
             } else {
                 main.showSnackBar("કૃપા કરીને સરનામું દાખલ કરો")
+                hideLoading()
                 return
             }
 
@@ -387,14 +399,17 @@ class RegisterNewMemberActivity :
                 requireFields["gender"] = selectedText
             } else {
                 main.showSnackBar("કૃપા કરીને જાતિ પસંદ કરો")
+                hideLoading()
                 return
             }
 
             if (!etMobile.isStringValid()) {
                 main.showSnackBar("કૃપા કરીને મોબાઇલ નંબર દાખલ કરો")
+                hideLoading()
                 return
             } else if (etMobile.trimString().length != 10) {
                 main.showSnackBar("મોબાઇલ નંબર ૧૦ અંકનો હોવો જોઈએ")
+                hideLoading()
                 return
             } else {
                 requireFields["mobileNo"] = etMobile.trimString()
@@ -402,9 +417,11 @@ class RegisterNewMemberActivity :
 
             if (!etEmail.isStringValid()) {
                 main.showSnackBar("કૃપા કરીને ઈમેઇલ આઈડી દાખલ કરો")
+                hideLoading()
                 return
             } else if (!isValidEmail(etEmail.trimString())) {
                 main.showSnackBar("સાચો ઈમેઇલ આઈડી દાખલ કરો")
+                hideLoading()
                 return
             } else {
                 requireFields["emailId"] = etEmail.trimString()
@@ -414,9 +431,11 @@ class RegisterNewMemberActivity :
                     .contains(" ")
             ) {
                 main.showSnackBar("કૃપા કરીને પાસવર્ડ દાખલ કરો")
+                hideLoading()
                 return
             } else if (etPassword.getText().trim().length < 8) {
                 main.showSnackBar("પાસવર્ડ ૭ અક્ષરોથી વધુ હોવો જોઈએ")
+                hideLoading()
                 return
             } else {
                 requireFields["password"] = etPassword.getText().trim()
@@ -430,6 +449,7 @@ class RegisterNewMemberActivity :
                 requireFields["occupation"] = selectedText
             } else {
                 main.showSnackBar("કૃપા કરીને વ્યવસાય પસંદ કરો")
+                hideLoading()
                 return
             }
 
@@ -437,6 +457,7 @@ class RegisterNewMemberActivity :
                 requireFields["businessType"] = etBusinessType.trimString()
             } else {
                 main.showSnackBar("કૃપા કરીને વ્યવસાય ક્ષેત્રે પસંદ કરો")
+                hideLoading()
                 return
             }
 
@@ -465,6 +486,7 @@ class RegisterNewMemberActivity :
                 requireFields["maritalStatus"] = selectedText
             } else {
                 main.showSnackBar("કૃપા કરીને લગ્ન દરજ્જો પસંદ કરો")
+                hideLoading()
                 return
             }
 
@@ -472,6 +494,7 @@ class RegisterNewMemberActivity :
                 requireFields["village"] = etVillage.trimString()
             } else {
                 main.showSnackBar("કૃપા કરીને ગામ પસંદ કરો")
+                hideLoading()
                 return
             }
 
@@ -479,21 +502,25 @@ class RegisterNewMemberActivity :
                 requireFields["currentCity"] = etResidence.trimString()
             } else {
                 main.showSnackBar("કૃપા કરીને રહેણાંક પસંદ કરો")
+                hideLoading()
                 return
             }
 
             if (selectedImageUri == null) {
                 main.showSnackBar("કૃપા કરીને આઈડી પ્રૂફ દર્શાવો")
+                hideLoading()
                 return
             }
 
             if (selectedProfileUri == null) {
                 main.showSnackBar("કૃપા કરી ને પ્રોફાઇલ પસંદ કરો")
+                hideLoading()
                 return
             }
 
             if (!cbPpTc.isChecked) {
                 main.showSnackBar("Terms and condition / privacy policy ટિક કરો")
+                hideLoading()
                 return
             }
 
