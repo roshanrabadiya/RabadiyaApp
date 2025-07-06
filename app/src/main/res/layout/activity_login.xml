@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackground"
+    tools:context=".presentation.login.LoginActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.rabadiya.base.customviews.customtextview.CommonTextView
+                android:id="@+id/tvWelcomeMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="104dp"
+                android:text="@string/welcome_message"
+                android:textSize="26sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:textColor="secondaryOnTheme"
+                app:textSize="toolbar"
+                app:textStyle="bold" />
+
+            <com.rabadiya.base.customviews.customtextview.CommonTextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_60sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:includeFontPadding="false"
+                android:text="@string/mobile_or_email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvWelcomeMessage"
+                app:textColor="secondaryOnTheme"
+                app:textSize="dialog"
+                app:textStyle="semiBold" />
+
+            <com.rabadiya.base.customviews.customtextview.CommonEditText
+                android:id="@+id/etPhoneMobile"
+                style="@style/EdittextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:hint="@string/demo_mobile"
+                android:inputType="number"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+            <com.rabadiya.base.customviews.customtextview.CommonTextView
+                android:id="@+id/tvPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:includeFontPadding="false"
+                android:text="@string/res_password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etPhoneMobile"
+                app:textColor="secondaryOnTheme"
+                app:textSize="dialog"
+                app:textStyle="semiBold" />
+
+            <com.rabadiya.base.customviews.customtextview.PasswordEditText
+                android:id="@+id/etPassword"
+                style="@style/EdittextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:maxLines="1"
+                android:paddingVertical="@dimen/_1sdp"
+                android:paddingStart="@dimen/_6sdp"
+                app:hint="@string/res_write_password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPassword"
+                tools:ignore="RtlSymmetry" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLogin"
+                style="@style/ButtonPrimaryTheme"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:layout_marginTop="28dp"
+                android:text="@string/login_"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etPassword" />
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/fxbOr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:alignContent="center"
+                app:alignItems="center"
+                app:justifyContent="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnLogin"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_30sdp">
+                
+                <View
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="0.5dp"
+                    android:background="@drawable/button_primary_bg"/>
+
+                <com.rabadiya.base.customviews.customtextview.CommonTextView
+                    android:id="@+id/tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_18sdp"
+                    android:includeFontPadding="false"
+                    android:text="@string/or"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvWelcomeMessage"
+                    app:textColor="secondaryOnTheme"
+                    app:textSize="dialog"
+                    app:textStyle="semiBold" />
+
+                <View
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="0.5dp"
+                    android:background="@drawable/button_primary_bg"/>
+                
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNewApplication"
+                style="@style/ButtonPrimaryThemeBorder"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:text="@string/res_application_submit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fxbOr" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

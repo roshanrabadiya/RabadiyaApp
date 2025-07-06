@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">RabadiyaParivarApp</string>
+    <string name="app_name" translatable="false">રાબડીયા પરિવાર</string>
 
     <string name="app_title">Rabadiya Parivar</string>
     <string name="res_login" translatable="false">Login</string>
@@ -466,7 +466,5 @@
         <item>@string/res_residence_19</item>
         <item>@string/res_residence_20</item>
     </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

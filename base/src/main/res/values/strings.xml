@@ -28,6 +28,13 @@
     <string name="res_new_registration">નવી નોંધણી</string>
     <string name="res_ad_registration">જાહેરાત નોંધણી</string>
 
+    <!-- Login -->
+    <string name="welcome_message">રાબડીયા પરિવારમાં આપનું હાર્દિક\nસ્વાગત છે.</string>
+    <string name="mobile_or_email">મોબાઈલ અથવા ઈમેલ</string>
+    <string name="demo_mobile">૮૧૪૨૩ ૭૮૧૧૧</string>
+    <string name="login_">લોગીન કરો</string>
+    <string name="or">અથવા</string>
+
     <!-- Errors -->
     <string name="something_went_wrong">કૃપા કરીને થોડા સમય પછી ફરી પ્રયાસ કરો.</string>
     <string name="no_data">કોઈ ડેટા નથી</string>
